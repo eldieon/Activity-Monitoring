@@ -56,4 +56,8 @@ run_dat$group <- str_replace_all(run_dat$group, "1", "test")
 run_dat$group <- str_replace_all(run_dat$group, "2", "train")
 run_dat$group <- as.factor(run_dat$group)
 
+run_dat <- tbl_df(run_dat)%>%
+        arrange(group, subject, activity)
+
+write.table(run_dat, "run_dat.txt", row.name=FALSE)
 
