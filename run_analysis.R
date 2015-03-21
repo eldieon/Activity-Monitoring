@@ -2,7 +2,6 @@ library(stringr)
 library(dplyr)
 library(data.table)
 
-setwd("~/Documents/Getting and Cleaning data/course project/UCI HAR Dataset")
 subj_test <- read.table("test/subject_test.txt")
 x_test <- read.table("test/X_test.txt")
 y_test <- read.table("test/y_test.txt")
